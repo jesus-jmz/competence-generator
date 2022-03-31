@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Generador de competencias</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="form">
+      <div class="header">
+        <h1>Generador de competencias</h1>
+        <p>Esta es la herramienta que se debe utilizar para generar la competencia del Deck.</p>
+      </div>
+      <div class="head">
+        <h4>Indicaciones</h4>
+      </div>
+      <div class="head">
+        <h4>Ejemplo</h4>
+      </div>
+      <div class="head">
+        <h4>Completa</h4>
+      </div>
+      <div class="item">
+        <p>Selecciona la clase de aprendizaje que se desarrollará en el Deck.</p>
+      </div>
+      <div class="item">
+        <p>Uso</p>
+      </div>
+      <div class="item">
+        <select id="nivel-tax" class="" name="nivel-tax" onchange="updateVerbs(); updateResult()">
+          <option value="conocimiento">1. Conocimiento</option>
+          <option value="comprension">2. Comprensión</option>
+          <option value="uso">3. Uso</option>
+          <option value="transferencia">4. Transferencia</option>
+        </select>
+      </div>
+      <div class="item">
+        <p>Selecciona la acción principal que realizará tu aprendedor en el Deck.</p>
+      </div>
+      <div class="item">
+        <p>Utilizo</p>
+      </div>
+      <div class="item">
+        <select id="verbs" class="" name="verbs" onchange="updateResult();">
+          <option value="test">test</option>
+          <option value="test">test</option>
+          <option value="test">test</option>
+          <option value="test">test</option>
+        </select>
+      </div>
+      <div class="item">
+        <p>Describe el tema de tu Deck.</p>
+      </div>
+      <div class="item">
+        <p>lenguajes de programación [java y C++]</p>
+      </div>
+      <div class="item">
+        <textarea id="tema" name="name" rows="5" cols="80" onchange="updateResult();"></textarea>
+      </div>
+      <div class="item">
+        <p>¿Para qué le servirá al aprendedor lo que verá en el Deck?</p>
+      </div>
+      <div class="item">
+        <p>para ejecutar funciones específicas</p>
+      </div>
+      <div class="item">
+        <textarea id="utilidad" name="name" rows="5" cols="80" onchange="updateResult();"></textarea>
+        <p class="notes">comienza con la preposición "para"</p>
+      </div>
+      <div class="item">
+        <p>¿En dónde y/o de qué manera el aprendedor utilizará lo aprendido?</p>
+      </div>
+      <div class="item">
+        <p>en un sistema digital</p>
+      </div>
+      <div class="item">
+        <textarea id="lugar" name="name" rows="5" cols="80" onchange="updateResult();"></textarea>
+        <p class="notes">Incluye información sobre las áreas de desempeño en donde impactarán los conocimientos adquiridos en el Deck.</p>
+      </div>
+      <div class="preview">
+        <div class="preview-in">
+          <h4>Resultado ejemplo</h4>
+          <p>Utiliza lenguajes de programación [java y C++] para ejecutar funciones específicas en un sistema digital.</p>
+          <h4>Resultado</h4>
+          <textarea id="resultado" name="name" rows="8" cols="50"></textarea>
+          <button type="button" name="button" onclick="copyToClipboard()">Copiar al portapapeles</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/form.js"></script>
+  </body>
+</html>
